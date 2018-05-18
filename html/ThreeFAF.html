@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #42c5ff;
+        }
+        .container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            /*flex: 1 200px;*/
+            border: 1px solid #8fff4f;
+        }
+        .content {
+            margin:0 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            border: 1px solid #8fff4f;
+            padding: 10px;
+        }
+        aside {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 200px;
+            border: 1px solid #8fff4f;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Taco Menu</li>
+            <li>Draft List</li>
+            <li>Hours</li>
+            <li>Directions</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="content">
+         <section>
+             section 的 margin-left 样式确保了有足够的空间容纳 nav 元素。
+         </section>
+         <section>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+            vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+            augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
+            in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+            sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+            gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+            pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+
+         </section>
+         <section>
+            注意观察当你调整浏览器窗口时发生了什么。效果很赞！
+            这个例子在容器比nav元素高的时候可以正常工作。如果容器比nav元素低，
+            那么nav会溢出到容器的外面。之后我们会讨论下其他布局技术，它们都各有优劣。
+         </section>
+    </div>
+    <aside>
+        <article>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+            vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+            augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
+            in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+            sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+            gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+            pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+
+        </article>
+    </aside>
+
+</body>
+</html>

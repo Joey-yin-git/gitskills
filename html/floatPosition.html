@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Method float to realize relative-absolute</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (min-width:600px) {
+            nav {
+                float: left;
+                /*width: 200px;*/
+                width: 30%;
+                border: 1px solid #8fff4f;
+            }
+
+            section {
+                /*margin-left: 210px;*/
+                margin-left: 30%;
+                border: 1px solid #8fff4f;
+                padding: 10px;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                height: 70px;
+                background-color: white;
+                width: 100%;
+                border: 1px solid #8fff4f;
+            }
+        }
+        @media screen and (max-width:599px) {
+            nav li {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Taco Menu</li>
+            <li>Draft List</li>
+            <li>Hours</li>
+            <li>Directions</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section>
+        section 的 margin-left 样式确保了有足够的空间容纳 nav 元素。
+
+    </section>
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+        vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+        ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+        augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
+        in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+        Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+        sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+        gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+        pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+
+    </section>
+    <section>
+        注意观察当你调整浏览器窗口时发生了什么。效果很赞！
+        这个例子在容器比nav元素高的时候可以正常工作。如果容器比nav元素低，
+        那么nav会溢出到容器的外面。之后我们会讨论下其他布局技术，它们都各有优劣。
+
+    </section>
+    <footer>
+        如果你使用了一个固定定位的页眉或页脚，确保有足够的空间来显示它们！我在 body 上面加了 margin-bottom 。
+    </footer>
+
+</div>
+</body>
+</html>
